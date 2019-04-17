@@ -6,6 +6,13 @@ body{
    
     background-image: url("01.jpg");
 }
+.navbar{
+    background-color:#39ac39;
+  
+}
+.nav-link{
+    color:#fff;
+}
 h2{
 text-shadow: 4px 4px 4px#BBBBB3;
  font-family: sans-serif;
@@ -42,8 +49,10 @@ text-shadow: 4px 4px 4px#BBBBB3;
      background-color:  #BBBBB3;
      border: solid black 2px;
  }
- .btn{
-
-     padding:40px;
+ button{
+    width: 120px;
+     padding:10px;
      border:solid black 2px;
+     box-shadow: 2px 2px 2px #fff;
+     border-radius: 6%;
  }
