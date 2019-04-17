@@ -1,12 +1,19 @@
 .jumbotron {
-   background-image: url("1.jpg");
+    background-image: url("pizzas.jpg");
    width:100%;
 }
 body{
-    background-color:  red;
+   
+    background-image: url("01.jpg");
+}
+h2{
+text-shadow: 4px 4px 4px#BBBBB3;
+ font-family: sans-serif;
+ text-align: center;
+ margin-top: 1%;
 }
 .card{
-    background-color: #BBBBB3;
+    background-color:  #992600;
 }
 .card-block{
     background-color: #E5DAB7;
@@ -33,6 +40,7 @@ body{
  }
  .container{
      background-color:  #BBBBB3;
+     border: solid black 2px;
  }
  .btn{
 
