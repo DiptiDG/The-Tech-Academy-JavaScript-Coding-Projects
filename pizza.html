@@ -69,7 +69,7 @@
 				<div class="card">
 				
 					<div class="card-block rounded">
-						<h4 class="card-title bg-dark text-light">meat</h4>
+						<h4 class="card-title bg-dark text-light">Meat</h4>
                         <input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
                         <input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
                         <input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
@@ -110,7 +110,7 @@
 				<div class="card">
 			
 					<div class="card-block rounded">
-						<h4 class="card-title bg-dark text-light">sauce</h4>
+						<h4 class="card-title bg-dark text-light">Sauce</h4>
 						<input class="sauce" type="radio" name="Sauce" value="Marinara sauce" checked> Marinara sauce<br>
                                     <input class="sauce" type="radio" name="Sauce" value="White sauce"> White sauce<br>
                                     <input class="sauce" type="radio" name="Sauce" value="Barbeque sauce"> Barbeque sauce<br>
@@ -205,17 +205,57 @@
             
             
                </div>
-                        <div id="cart"  >
-                            <div id="title1" class= "bg-dark text-light"><h3>Your Ordered:</h3></div><hr>
-                            <div id="title2"><h3> </h3></div><hr>
-                            <div id="showText1"></div><hr>
-                            <div id="showText2"></div><hr>
-                            <div id="showText3"></div><hr>
-                            <div id="showText5"></div><hr>
-                            <div id="showText4"></div><hr>
-                            <div id="totalPrice1"><h3>Total Price:</h3></div>
-                            <div id="totalPrice2"></div>
-                        </div>
+               <table  class="table table-bordered" id="cart">
+                <thead>
+                  <tr>
+                    <th id ="title1"class= "bg-dark text-light">Your Ordered</th>
+                    <th id="title"class= "bg-dark text-light">subTotal</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th id="title2"></th>
+                    <th id="pizzaPrice"></th>
+                  
+                  </tr>
+
+        
+                  <tr>
+                    <th id="showText1"></th>
+                    <th id="meatPrice"></th>
+                   
+                  </tr>
+                  <tr>
+                    <th id= "showText2"></th>
+                    <th id="veggiePrice"></th>
+                    
+                  </tr>
+
+                  <tr>
+                    <th id= "showText3"></th>
+                    <th id="cheesePrice"></th>
+                    
+                  </tr>
+                  <tr>
+                    <th id= "showText4"></th>
+                    <th id ="crustPrice"></th>
+                    
+                  </tr>
+                  <tr>
+                    <th id= "showText5"></th>
+                    <th id ="saucePrice"></th>
+                    
+                  </tr>
+                  <hr>
+                  <tr>
+                    <th id= "totalPrice1">Total Price:</th>
+                    <th id= "totalPrice2"></th>
+                    
+                  </tr>
+               
+                </tbody>
+              </table>
                     </div>
                     
                   </div>

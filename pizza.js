@@ -40,67 +40,59 @@ function printReceipt(){
   subTotal = sizeTotal;
   console.log("Your order is : "+sizeResult);
   console.log("your total is "+sizeTotal);
-  document.getElementById('title2').innerHTML = sizeResult + " " + "$" +sizeTotal;
+  document.getElementById('title2').innerHTML = sizeResult 
+  document.getElementById('pizzaPrice').innerHTML= "$" +sizeTotal;
 
 
  var total = meatResult() + cheeseResult() + veggieResult() + sauceResult()+ crustResult();
   subTotal = sizeTotal +  total;
   console.log("your total is: "+subTotal);
-document.getElementById('totalPrice1').innerHTML =  "<h3>Total: "+subTotal+".00"+"</strong></h3>";
+document.getElementById('totalPrice2').innerHTML = subTotal;
 	
 }
 function meatResult(){
-    var meatArray = document.getElementsByClassName('meats');
-    var meatTotal = 0;
-   var meatResult = [];
-   var result = []
-    var meatCount = 0;
-    for(var j = 0; j< meatArray.length; j++)
-    {
-       
-        if(meatArray[j].checked)
-        {
-            meatResult = meatArray[j].value;
-           console.log("selected meat item: "+meatResult);
-       
-          
-        
-           meatCount++;
-        }
-    }
 
-    
-    console.log("meatresult is "+meatResult);
-    
-    if(meatCount >1)
-
-    {
-        meatCount = meatCount - 1;
-      meatTotal= meatCount*1;   //$1 for each extra meat
-      console.log("meatTotal is: "+meatTotal);
-    }
-    else
-    {
-    
-    meatTotal = 0;
-    console.log("meatTotla is:"+meatTotal);
-    }
-
-    document.getElementById('showText1').innerHTML = meatResult + "" + "+" +  "$" +meatTotal;
+  var meatArray = document.getElementsByClassName('meats');
+  var meatResult = "";
+  var meatTotal= 0;
+  var meatCount = 0;
+  for(var j = 0; j< meatArray.length; j++ )
+  {
+   
+      if(meatArray[j].checked)
+      {
+         meatResult = meatResult + "  ," +meatArray[j].value;
+         meatCount++;
+         console.log("meat Result is:" +meatArray[j].value);
   
-    result = meatTotal;
-     return meatTotal;
-     
+      }
+  }
   
+  if(meatCount >1)
+  {
+      meatCount = meatCount -1;
+     meatTotal = meatCount * 1;//$1 for extra veggie
+     console.log("meat total is: " +meatTotal);
+  }
+  else
+  {
+  veggieTotal = 0;
+  console.log("meat total is: " +meatTotal);
+  }
+  
+  document.getElementById('showText1').innerHTML = meatResult 
+  document.getElementById('meatPrice').innerHTML = "+" +"$" +meatTotal;
     
-
-}
-
+  return meatTotal;
+  
+  
+  
+  }
 
 function veggieResult(){
 
 var veggieArray = document.getElementsByClassName('veggies');
-
+var veggieResult = "";
 var veggieTotal= 0;
 var veggieCount = 0;
 for(var j = 0; j< veggieArray.length; j++ )
@@ -108,7 +100,8 @@ for(var j = 0; j< veggieArray.length; j++ )
  
     if(veggieArray[j].checked)
     {
-       var veggieResult= veggieArray[j].value;
+       var veggieResult= veggieResult + " ," +veggieArray[j].value;
+       
        veggieCount++;
        console.log("veggie Result is:" +veggieArray[j].value);
 
@@ -127,7 +120,8 @@ veggieTotal = 0;
 console.log("veggie total is: " +veggieTotal);
 }
 
-document.getElementById('showText2').innerHTML = veggieResult  + "" + "+" +  "$" +veggieTotal;
+document.getElementById('showText2').innerHTML = veggieResult  ;
+document.getElementById('veggiePrice').innerHTML = "+" +"$" +veggieTotal;
   
 return veggieTotal;
 
@@ -167,7 +161,8 @@ function cheeseResult(){
    cheeseTotal = 0;
    console.log("cheesetotal is :" +cheeseTotal);
     }
-    document.getElementById('showText3').innerHTML = cheeseResult  + "" + "+" +  "$" +cheeseTotal;
+    document.getElementById('showText3').innerHTML = cheeseResult ;
+    document.getElementById('cheesePrice').innerHTML= "+" +  "$" +cheeseTotal;
  return cheeseTotal;
 }
 
@@ -199,7 +194,8 @@ else
 crustTotal = 0;
 console.log("crustTotal is :" +crustTotal);
 }
-document.getElementById('showText4').innerHTML = crustResult + "" + "+" +  "$" +crustTotal;
+document.getElementById('showText4').innerHTML = crustResult;
+document.getElementById('crustPrice').innerHTML= " + " + "$" +crustTotal;
 return crustTotal;
 }
 
@@ -217,11 +213,12 @@ function sauceResult(){
 }
 
 sauceTotal = 0;
-document.getElementById('showText5').innerHTML = sauceResult + "" + "+" +  "$" + "0.00";
+document.getElementById('showText5').innerHTML = sauceResult ;
+document.getElementById('saucePrice') .innerHTML= "+" +  "$" + "0";
 return sauceTotal;
 }
 
 
 function Clear() {
-  document.getElementById('totalPrice1').innerHTML="0.00"
+  document.getElementById('cart').style.opacity=0;
 		 };
